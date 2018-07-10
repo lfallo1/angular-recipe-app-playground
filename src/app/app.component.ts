@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import {AfterViewInit, Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: []
 })
 export class AppComponent {
-  title = 'app';
+  title = 'App Demo Title';
+  mode = 'recipe';
+
+  modeChanged(mode){
+    this.mode = mode;
+  }
 }
