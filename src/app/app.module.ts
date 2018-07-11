@@ -9,6 +9,8 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
+import {FormsModule} from '@angular/forms';
+import { CustomDirectiveDirective } from './directives/custom-directive.directive';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,12 @@ import { RecipesComponent } from './recipes/recipes.component';
     RecipeItemComponent,
     RecipeDetailComponent,
     HeaderComponent,
-    RecipesComponent
+    RecipesComponent,
+    CustomDirectiveDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
