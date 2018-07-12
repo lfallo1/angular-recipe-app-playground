@@ -25,6 +25,16 @@
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="btn btn-outline-danger" (click)="generateRandomNumber()">Random Number</div>
+      <div class="col" [ngSwitch]="mod">
+        <div *ngSwitchCase="0">0</div>
+        <div *ngSwitchCase="1">1</div>
+        <div *ngSwitchCase="2">2</div>
+        <div *ngSwitchCase="3">3</div>
+        <div *ngSwitchDefault>4</div>
+      </div>
+    </div>
   </div>
 </div>
 
