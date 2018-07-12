@@ -13,8 +13,16 @@
       </div>
     </div>
     <div class="row">
-      <div id="myTarget" class="col" appCustomDirective color="#c51162" content="TEST TEST">
+      <div id="myTarget" class="col" appCustomDirective paramColor="#c51162" paramContent="TEST TEST">
         This some random text
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="btn btn-outline-success" (click)="hideMe = !hideMe">Toggle</div>
+        <div *appUnless="hideMe">
+          <h2>If you can see me, hideMe must be false</h2>
+        </div>
       </div>
     </div>
   </div>

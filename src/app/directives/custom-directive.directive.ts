@@ -5,8 +5,9 @@ import {Directive, ElementRef, HostBinding, HostListener, Input, OnInit, Rendere
 })
 export class CustomDirectiveDirective implements OnInit {
 
-  @Input() content: string;
-  @Input() color: string;
+  @Input() paramContent: string;
+  @Input() paramColor: string;
+
   @HostBinding('style.backgroundColor') backgroundStyle: string = 'transparent';
   @HostBinding('style.color') colorStyle: string = 'black';
 
@@ -15,7 +16,7 @@ export class CustomDirectiveDirective implements OnInit {
   @HostListener('mouseenter') mouseover(){
     // this.renderer.setStyle(this.elRef.nativeElement, 'background', this.backgroundColor || '#3700b3');
     // this.renderer.setStyle(this.elRef.nativeElement, 'color', 'white');
-    this.backgroundStyle = this.color || '#3700b3';
+    this.backgroundStyle = this.paramColor || '#3700b3';
     this.colorStyle = 'white';
   }
 
@@ -27,7 +28,7 @@ export class CustomDirectiveDirective implements OnInit {
   }
 
   ngOnInit(): void {
-    this.renderer.setProperty(this.elRef.nativeElement, 'innerHTML', this.content || 'This is the content');
+    this.renderer.setProperty(this.elRef.nativeElement, 'innerHTML', this.paramContent || 'This is the content');
   }
 
 }

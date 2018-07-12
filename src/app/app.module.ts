@@ -11,6 +11,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import {FormsModule} from '@angular/forms';
 import { CustomDirectiveDirective } from './directives/custom-directive.directive';
+import { UnlessDirective } from './directives/unless.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CustomDirectiveDirective } from './directives/custom-directive.directiv
     RecipeDetailComponent,
     HeaderComponent,
     RecipesComponent,
-    CustomDirectiveDirective
+    CustomDirectiveDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
