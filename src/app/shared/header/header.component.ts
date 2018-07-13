@@ -9,6 +9,7 @@ export class HeaderComponent {
 
   @Output('onModeChanged') modeChanged = new EventEmitter<string>();
   @Input() page: string;
+  showDropdown: boolean = false;
 
   changeMode(mode: string) {
     this.modeChanged.emit(mode);

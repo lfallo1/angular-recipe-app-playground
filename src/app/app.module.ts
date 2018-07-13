@@ -10,7 +10,6 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { HeaderComponent } from './shared/header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import {FormsModule} from '@angular/forms';
-import { CustomDirectiveDirective } from './directives/custom-directive.directive';
 
 @NgModule({
   declarations: [
@@ -21,8 +20,7 @@ import { CustomDirectiveDirective } from './directives/custom-directive.directiv
     RecipeItemComponent,
     RecipeDetailComponent,
     HeaderComponent,
-    RecipesComponent,
-    CustomDirectiveDirective
+    RecipesComponent
   ],
   imports: [
     BrowserModule,
